@@ -1,0 +1,24 @@
+--Reloj digital minutos
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity minutos is port(
+	clkl: in std_logic;
+	contador: buffer integer;
+	salida: out std_logic);
+end entity;
+
+architecture arquitectura_minutos of minutos is
+begin
+	process(clkl)
+	begin
+		if(rising_edge(clkl)) then
+			if(contador = 59) then 
+				salida <= '1';
+			else
+				contador <= contador + 1;
+				salida <= '0';
+		end if;
+	end process;
+end architecture;

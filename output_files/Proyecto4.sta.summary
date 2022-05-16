@@ -1,0 +1,281 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'divisor_de_frecuencia:divf_reloj|clkl'
+Slack : -5.003
+TNS   : -121.343
+
+Type  : Slow 1200mV 85C Model Setup 'echo'
+Slack : -3.949
+TNS   : -3.949
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -3.830
+TNS   : -149.106
+
+Type  : Slow 1200mV 85C Model Setup 'segundos:segundero|cambio_min'
+Slack : -3.534
+TNS   : -109.652
+
+Type  : Slow 1200mV 85C Model Setup 'minutos:minutero|cambio_hrs'
+Slack : -2.592
+TNS   : -55.429
+
+Type  : Slow 1200mV 85C Model Setup 'divisor_de_frecuencia:divf_servo|clkl'
+Slack : -2.361
+TNS   : -7.173
+
+Type  : Slow 1200mV 85C Model Setup 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : -1.830
+TNS   : -14.866
+
+Type  : Slow 1200mV 85C Model Hold 'divisor_de_frecuencia:divf_servo|clkl'
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'minutos:minutero|cambio_hrs'
+Slack : 0.527
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'segundos:segundero|cambio_min'
+Slack : 0.652
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'divisor_de_frecuencia:divf_reloj|clkl'
+Slack : 1.123
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'echo'
+Slack : 3.672
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : -0.598
+TNS   : -6.358
+
+Type  : Slow 1200mV 85C Model Removal 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : 0.977
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -82.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'echo'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisor_de_frecuencia:divf_reloj|clkl'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'segundos:segundero|cambio_min'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'minutos:minutero|cambio_hrs'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisor_de_frecuencia:divf_servo|clkl'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 0C Model Setup 'divisor_de_frecuencia:divf_reloj|clkl'
+Slack : -4.583
+TNS   : -109.320
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.492
+TNS   : -128.370
+
+Type  : Slow 1200mV 0C Model Setup 'echo'
+Slack : -3.407
+TNS   : -3.407
+
+Type  : Slow 1200mV 0C Model Setup 'segundos:segundero|cambio_min'
+Slack : -3.158
+TNS   : -98.236
+
+Type  : Slow 1200mV 0C Model Setup 'minutos:minutero|cambio_hrs'
+Slack : -2.212
+TNS   : -46.807
+
+Type  : Slow 1200mV 0C Model Setup 'divisor_de_frecuencia:divf_servo|clkl'
+Slack : -2.100
+TNS   : -5.876
+
+Type  : Slow 1200mV 0C Model Setup 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : -1.613
+TNS   : -12.441
+
+Type  : Slow 1200mV 0C Model Hold 'divisor_de_frecuencia:divf_servo|clkl'
+Slack : 0.351
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.396
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'minutos:minutero|cambio_hrs'
+Slack : 0.472
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'segundos:segundero|cambio_min'
+Slack : 0.602
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'divisor_de_frecuencia:divf_reloj|clkl'
+Slack : 1.038
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'echo'
+Slack : 3.318
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : -0.596
+TNS   : -6.296
+
+Type  : Slow 1200mV 0C Model Removal 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : 0.936
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -82.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'echo'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisor_de_frecuencia:divf_reloj|clkl'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'segundos:segundero|cambio_min'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'minutos:minutero|cambio_hrs'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisor_de_frecuencia:divf_servo|clkl'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Setup 'divisor_de_frecuencia:divf_reloj|clkl'
+Slack : -1.632
+TNS   : -32.119
+
+Type  : Fast 1200mV 0C Model Setup 'echo'
+Slack : -1.488
+TNS   : -1.488
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.041
+TNS   : -17.520
+
+Type  : Fast 1200mV 0C Model Setup 'segundos:segundero|cambio_min'
+Slack : -0.857
+TNS   : -25.412
+
+Type  : Fast 1200mV 0C Model Setup 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : -0.544
+TNS   : -4.284
+
+Type  : Fast 1200mV 0C Model Setup 'divisor_de_frecuencia:divf_servo|clkl'
+Slack : -0.504
+TNS   : -0.504
+
+Type  : Fast 1200mV 0C Model Setup 'minutos:minutero|cambio_hrs'
+Slack : -0.403
+TNS   : -4.369
+
+Type  : Fast 1200mV 0C Model Hold 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : 0.057
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.121
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'divisor_de_frecuencia:divf_servo|clkl'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'minutos:minutero|cambio_hrs'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'segundos:segundero|cambio_min'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'divisor_de_frecuencia:divf_reloj|clkl'
+Slack : 0.365
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'echo'
+Slack : 1.796
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -86.268
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'echo'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisor_de_frecuencia:divf_reloj|clkl'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'segundos:segundero|cambio_min'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'minutos:minutero|cambio_hrs'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisor_de_frecuencia:divf_sensor|clkl'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisor_de_frecuencia:divf_servo|clkl'
+Slack : -1.000
+TNS   : -8.000
+
+------------------------------------------------------------

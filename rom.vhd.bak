@@ -1,0 +1,30 @@
+--ROM (Read Only Memory)
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity rom is port(
+	hh,mm,ss: in integer;
+	salida: out std_logic);
+end entity;
+
+architecture arqROM of rom is	
+	type memoria is array(1 downto 0) of integer;
+	constant memoria_ROM: memoria:=(30,0);
+	signal dato: integer;
+begin
+-- Se lee el dato almacenado en la memoria ROM
+	process(ss)
+	begin
+		dato <= memoria_ROM(1);
+	end process;
+	
+-- Se envia un '1' de salida si se cumple la condición, en otro caso se envía '0'
+	process(dato)
+	begin
+		if(hh = 0 and mm = 0 and ss = dato) then
+			cerradura <= '1';
+		else
+			cerradura <= '0';
+		end if;
+	end process;

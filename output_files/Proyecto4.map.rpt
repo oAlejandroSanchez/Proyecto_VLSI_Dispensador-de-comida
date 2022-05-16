@@ -1,0 +1,625 @@
+Analysis & Synthesis report for Proyecto4
+Sun May 15 19:10:29 2022
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: divisor_de_frecuencia:divf_reloj
+ 13. Parameter Settings for User Entity Instance: divisor_de_frecuencia:divf_servo
+ 14. Parameter Settings for User Entity Instance: senial:Senial_servo
+ 15. Parameter Settings for User Entity Instance: divisor_de_frecuencia:divf_sensor
+ 16. Port Connectivity Checks: "senial:Senial_servo"
+ 17. Port Connectivity Checks: "movimiento:Mov_servo"
+ 18. Port Connectivity Checks: "rom:Memoria_ROM"
+ 19. Port Connectivity Checks: "display_decenas:display_hrs_decena"
+ 20. Port Connectivity Checks: "display_unidades:display_hrs_unidad"
+ 21. Port Connectivity Checks: "display_decenas:display_min_decena"
+ 22. Port Connectivity Checks: "display_unidades:display_min_unidad"
+ 23. Port Connectivity Checks: "display_decenas:display_seg_decena"
+ 24. Port Connectivity Checks: "display_unidades:display_seg_unidad"
+ 25. Port Connectivity Checks: "horas:hora"
+ 26. Port Connectivity Checks: "minutos:minutero"
+ 27. Port Connectivity Checks: "segundos:segundero"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun May 15 19:10:29 2022      ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
+; Revision Name                      ; Proyecto4                                  ;
+; Top-level Entity Name              ; Proyecto4                                  ;
+; Family                             ; MAX 10                                     ;
+; Total logic elements               ; 487                                        ;
+;     Total combinational functions  ; 487                                        ;
+;     Dedicated logic registers      ; 197                                        ;
+; Total registers                    ; 197                                        ;
+; Total pins                         ; 50                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
+; UFM blocks                         ; 0                                          ;
+; ADC blocks                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                                      ; Proyecto4          ; Proyecto4          ;
+; Family name                                                                ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; Proyecto4.vhd                    ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/Proyecto4.vhd             ;         ;
+; divisor_de_frecuencia.vhd        ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/divisor_de_frecuencia.vhd ;         ;
+; senial.vhd                       ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/senial.vhd                ;         ;
+; movimiento.vhd                   ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/movimiento.vhd            ;         ;
+; segundos.vhd                     ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/segundos.vhd              ;         ;
+; minutos.vhd                      ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/minutos.vhd               ;         ;
+; horas.vhd                        ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/horas.vhd                 ;         ;
+; display_decenas.vhd              ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/display_decenas.vhd       ;         ;
+; display_unidades.vhd             ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/display_unidades.vhd      ;         ;
+; rom.vhd                          ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/rom.vhd                   ;         ;
+; senial_sensor.vhd                ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/senial_sensor.vhd         ;         ;
+; trigger.vhd                      ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/trigger.vhd               ;         ;
+; contador.vhd                     ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/contador.vhd              ;         ;
+; tipo_de_salida.vhd               ; yes             ; User VHDL File  ; C:/Users/Alejandro Sanchez/Desktop/VLSI/Proyecto4_Yasmin/tipo_de_salida.vhd        ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 487       ;
+;                                             ;           ;
+; Total combinational functions               ; 487       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 202       ;
+;     -- 3 input functions                    ; 26        ;
+;     -- <=2 input functions                  ; 259       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 277       ;
+;     -- arithmetic mode                      ; 210       ;
+;                                             ;           ;
+; Total registers                             ; 197       ;
+;     -- Dedicated logic registers            ; 197       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 50        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 79        ;
+; Total fan-out                               ; 1998      ;
+; Average fan-out                             ; 2.55      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
++------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                            ; Library Name ;
++------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+--------------+
+; |Proyecto4                               ; 487 (0)           ; 197 (0)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 50   ; 0            ; 0          ; |Proyecto4                                     ; work         ;
+;    |contador:Contador_sensor|            ; 19 (19)           ; 12 (12)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|contador:Contador_sensor            ; work         ;
+;    |display_decenas:display_hrs_decena|  ; 5 (5)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|display_decenas:display_hrs_decena  ; work         ;
+;    |display_decenas:display_min_decena|  ; 15 (15)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|display_decenas:display_min_decena  ; work         ;
+;    |display_decenas:display_seg_decena|  ; 11 (11)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|display_decenas:display_seg_decena  ; work         ;
+;    |display_unidades:display_hrs_unidad| ; 14 (14)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|display_unidades:display_hrs_unidad ; work         ;
+;    |display_unidades:display_min_unidad| ; 35 (35)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|display_unidades:display_min_unidad ; work         ;
+;    |display_unidades:display_seg_unidad| ; 37 (37)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|display_unidades:display_seg_unidad ; work         ;
+;    |divisor_de_frecuencia:divf_reloj|    ; 47 (47)           ; 26 (26)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|divisor_de_frecuencia:divf_reloj    ; work         ;
+;    |divisor_de_frecuencia:divf_sensor|   ; 37 (37)           ; 26 (26)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|divisor_de_frecuencia:divf_sensor   ; work         ;
+;    |divisor_de_frecuencia:divf_servo|    ; 41 (41)           ; 26 (26)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|divisor_de_frecuencia:divf_servo    ; work         ;
+;    |horas:hora|                          ; 45 (45)           ; 32 (32)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|horas:hora                          ; work         ;
+;    |minutos:minutero|                    ; 44 (44)           ; 33 (33)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|minutos:minutero                    ; work         ;
+;    |rom:Memoria_ROM|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|rom:Memoria_ROM                     ; work         ;
+;    |segundos:segundero|                  ; 114 (114)         ; 33 (33)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|segundos:segundero                  ; work         ;
+;    |senial:Senial_servo|                 ; 13 (13)           ; 8 (8)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|senial:Senial_servo                 ; work         ;
+;    |senial_sensor:Senial_sensor|         ; 7 (7)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|senial_sensor:Senial_sensor         ; work         ;
+;    |trigger:Trigger_sensor|              ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Proyecto4|trigger:Trigger_sensor              ; work         ;
++------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; trigger:Trigger_sensor|salida                      ; echo                ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                   ;
++------------------------------------------+-----------------------------------------------------------+
+; Register name                            ; Reason for Removal                                        ;
++------------------------------------------+-----------------------------------------------------------+
+; senial_sensor:Senial_sensor|contador[24] ; Merged with divisor_de_frecuencia:divf_reloj|contador[24] ;
+; senial_sensor:Senial_sensor|contador[23] ; Merged with divisor_de_frecuencia:divf_reloj|contador[23] ;
+; senial_sensor:Senial_sensor|contador[22] ; Merged with divisor_de_frecuencia:divf_reloj|contador[22] ;
+; senial_sensor:Senial_sensor|contador[21] ; Merged with divisor_de_frecuencia:divf_reloj|contador[21] ;
+; senial_sensor:Senial_sensor|contador[20] ; Merged with divisor_de_frecuencia:divf_reloj|contador[20] ;
+; senial_sensor:Senial_sensor|contador[19] ; Merged with divisor_de_frecuencia:divf_reloj|contador[19] ;
+; senial_sensor:Senial_sensor|contador[18] ; Merged with divisor_de_frecuencia:divf_reloj|contador[18] ;
+; senial_sensor:Senial_sensor|contador[17] ; Merged with divisor_de_frecuencia:divf_reloj|contador[17] ;
+; senial_sensor:Senial_sensor|contador[16] ; Merged with divisor_de_frecuencia:divf_reloj|contador[16] ;
+; senial_sensor:Senial_sensor|contador[15] ; Merged with divisor_de_frecuencia:divf_reloj|contador[15] ;
+; senial_sensor:Senial_sensor|contador[14] ; Merged with divisor_de_frecuencia:divf_reloj|contador[14] ;
+; senial_sensor:Senial_sensor|contador[13] ; Merged with divisor_de_frecuencia:divf_reloj|contador[13] ;
+; senial_sensor:Senial_sensor|contador[12] ; Merged with divisor_de_frecuencia:divf_reloj|contador[12] ;
+; senial_sensor:Senial_sensor|contador[11] ; Merged with divisor_de_frecuencia:divf_reloj|contador[11] ;
+; senial_sensor:Senial_sensor|contador[10] ; Merged with divisor_de_frecuencia:divf_reloj|contador[10] ;
+; senial_sensor:Senial_sensor|contador[9]  ; Merged with divisor_de_frecuencia:divf_reloj|contador[9]  ;
+; senial_sensor:Senial_sensor|contador[8]  ; Merged with divisor_de_frecuencia:divf_reloj|contador[8]  ;
+; senial_sensor:Senial_sensor|contador[7]  ; Merged with divisor_de_frecuencia:divf_reloj|contador[7]  ;
+; senial_sensor:Senial_sensor|contador[6]  ; Merged with divisor_de_frecuencia:divf_reloj|contador[6]  ;
+; senial_sensor:Senial_sensor|contador[5]  ; Merged with divisor_de_frecuencia:divf_reloj|contador[5]  ;
+; senial_sensor:Senial_sensor|contador[4]  ; Merged with divisor_de_frecuencia:divf_reloj|contador[4]  ;
+; senial_sensor:Senial_sensor|contador[3]  ; Merged with divisor_de_frecuencia:divf_reloj|contador[3]  ;
+; senial_sensor:Senial_sensor|contador[2]  ; Merged with divisor_de_frecuencia:divf_reloj|contador[2]  ;
+; senial_sensor:Senial_sensor|contador[1]  ; Merged with divisor_de_frecuencia:divf_reloj|contador[1]  ;
+; senial_sensor:Senial_sensor|contador[0]  ; Merged with divisor_de_frecuencia:divf_reloj|contador[0]  ;
+; Total Number of Removed Registers = 25   ;                                                           ;
++------------------------------------------+-----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 197   ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 43    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 42    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Proyecto4|minutos:minutero|contador[22]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |Proyecto4|segundos:segundero|contador[9] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisor_de_frecuencia:divf_reloj ;
++----------------+----------+---------------------------------------------------+
+; Parameter Name ; Value    ; Type                                              ;
++----------------+----------+---------------------------------------------------+
+; num            ; 25000000 ; Signed Integer                                    ;
++----------------+----------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisor_de_frecuencia:divf_servo ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; num            ; 500   ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: senial:Senial_servo ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; num            ; 1000  ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisor_de_frecuencia:divf_sensor ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; num            ; 25    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "senial:Senial_servo"           ;
++-------------------------+-------+----------+--------------+
+; Port                    ; Type  ; Severity ; Details      ;
++-------------------------+-------+----------+--------------+
+; ciclo_de_trabajo[31..8] ; Input ; Info     ; Stuck at GND ;
++-------------------------+-------+----------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "movimiento:Mov_servo"                                                                        ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; salida[31..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "rom:Memoria_ROM" ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; hh[31..5] ; Input ; Info     ; Stuck at GND ;
+; mm[31..6] ; Input ; Info     ; Stuck at GND ;
+; ss[31..6] ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "display_decenas:display_hrs_decena" ;
++----------+-------+----------+----------------------------------+
+; Port     ; Type  ; Severity ; Details                          ;
++----------+-------+----------+----------------------------------+
+; c[31..5] ; Input ; Info     ; Stuck at GND                     ;
++----------+-------+----------+----------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "display_unidades:display_hrs_unidad" ;
++-----------------+-------+----------+----------------------------+
+; Port            ; Type  ; Severity ; Details                    ;
++-----------------+-------+----------+----------------------------+
+; contador[31..5] ; Input ; Info     ; Stuck at GND               ;
++-----------------+-------+----------+----------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "display_decenas:display_min_decena" ;
++----------+-------+----------+----------------------------------+
+; Port     ; Type  ; Severity ; Details                          ;
++----------+-------+----------+----------------------------------+
+; c[31..6] ; Input ; Info     ; Stuck at GND                     ;
++----------+-------+----------+----------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "display_unidades:display_min_unidad" ;
++-----------------+-------+----------+----------------------------+
+; Port            ; Type  ; Severity ; Details                    ;
++-----------------+-------+----------+----------------------------+
+; contador[31..6] ; Input ; Info     ; Stuck at GND               ;
++-----------------+-------+----------+----------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "display_decenas:display_seg_decena" ;
++----------+-------+----------+----------------------------------+
+; Port     ; Type  ; Severity ; Details                          ;
++----------+-------+----------+----------------------------------+
+; c[31..6] ; Input ; Info     ; Stuck at GND                     ;
++----------+-------+----------+----------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "display_unidades:display_seg_unidad" ;
++-----------------+-------+----------+----------------------------+
+; Port            ; Type  ; Severity ; Details                    ;
++-----------------+-------+----------+----------------------------+
+; contador[31..6] ; Input ; Info     ; Stuck at GND               ;
++-----------------+-------+----------+----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "horas:hora"                                                                                    ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; contador[31..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "minutos:minutero"                                                                              ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; contador[31..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "segundos:segundero"                                                                            ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; contador[31..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 50                          ;
+; cycloneiii_ff         ; 197                         ;
+;     CLR               ; 1                           ;
+;     ENA CLR           ; 42                          ;
+;     SCLR              ; 32                          ;
+;     plain             ; 122                         ;
+; cycloneiii_lcell_comb ; 493                         ;
+;     arith             ; 210                         ;
+;         2 data inputs ; 208                         ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 283                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 41                          ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 202                         ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.49                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Sun May 15 19:10:08 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Proyecto4 -c Proyecto4
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file proyecto4.vhd
+    Info (12022): Found design unit 1: Proyecto4-arquitecturaProyecto4
+    Info (12023): Found entity 1: Proyecto4
+Info (12021): Found 2 design units, including 1 entities, in source file divisor_de_frecuencia.vhd
+    Info (12022): Found design unit 1: divisor_de_frecuencia-arquitectura_divisor_de_frecuencia
+    Info (12023): Found entity 1: divisor_de_frecuencia
+Info (12021): Found 2 design units, including 1 entities, in source file senial.vhd
+    Info (12022): Found design unit 1: senial-arquitectura_senial
+    Info (12023): Found entity 1: senial
+Info (12021): Found 2 design units, including 1 entities, in source file movimiento.vhd
+    Info (12022): Found design unit 1: movimiento-arquitectura_movimiento
+    Info (12023): Found entity 1: movimiento
+Info (12021): Found 2 design units, including 1 entities, in source file entrada_button.vhd
+    Info (12022): Found design unit 1: entrada_button-arquitectura_Button
+    Info (12023): Found entity 1: entrada_button
+Info (12021): Found 2 design units, including 1 entities, in source file segundos.vhd
+    Info (12022): Found design unit 1: segundos-arquitectura_segundos
+    Info (12023): Found entity 1: segundos
+Info (12021): Found 2 design units, including 1 entities, in source file minutos.vhd
+    Info (12022): Found design unit 1: minutos-arquitectura_minutos
+    Info (12023): Found entity 1: minutos
+Info (12021): Found 2 design units, including 1 entities, in source file horas.vhd
+    Info (12022): Found design unit 1: horas-arquitectura_horas
+    Info (12023): Found entity 1: horas
+Info (12021): Found 2 design units, including 1 entities, in source file display_decenas.vhd
+    Info (12022): Found design unit 1: display_decenas-arquitectura_decenas
+    Info (12023): Found entity 1: display_decenas
+Info (12021): Found 2 design units, including 1 entities, in source file display_unidades.vhd
+    Info (12022): Found design unit 1: display_unidades-arquitectura_unidades
+    Info (12023): Found entity 1: display_unidades
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: rom-arquitectura_ROM
+    Info (12023): Found entity 1: rom
+Info (12021): Found 2 design units, including 1 entities, in source file senial_sensor.vhd
+    Info (12022): Found design unit 1: senial_sensor-arquitectura_senial_sensor
+    Info (12023): Found entity 1: senial_sensor
+Info (12021): Found 2 design units, including 1 entities, in source file trigger.vhd
+    Info (12022): Found design unit 1: trigger-arquitectura_trigger
+    Info (12023): Found entity 1: trigger
+Info (12021): Found 2 design units, including 1 entities, in source file contador.vhd
+    Info (12022): Found design unit 1: contador-arquitectura_contador
+    Info (12023): Found entity 1: contador
+Info (12021): Found 2 design units, including 1 entities, in source file tipo_de_salida.vhd
+    Info (12022): Found design unit 1: tipo_de_salida-arquitectura_tipo_de_salida
+    Info (12023): Found entity 1: tipo_de_salida
+Info (12127): Elaborating entity "Proyecto4" for the top level hierarchy
+Info (12129): Elaborating entity "divisor_de_frecuencia" using architecture "A:arquitectura_divisor_de_frecuencia" for hierarchy "divisor_de_frecuencia:divf_reloj"
+Info (12129): Elaborating entity "segundos" using architecture "A:arquitectura_segundos" for hierarchy "segundos:segundero"
+Warning (10492): VHDL Process Statement warning at segundos.vhd(18): signal "dsw1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at segundos.vhd(28): signal "boton1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at segundos.vhd(28): signal "dsw1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at segundos.vhd(30): signal "boton1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at segundos.vhd(30): signal "dsw1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at segundos.vhd(37): signal "boton2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at segundos.vhd(37): signal "dsw1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12129): Elaborating entity "minutos" using architecture "A:arquitectura_minutos" for hierarchy "minutos:minutero"
+Info (12129): Elaborating entity "horas" using architecture "A:arquitectura_horas" for hierarchy "horas:hora"
+Info (12129): Elaborating entity "display_unidades" using architecture "A:arquitectura_unidades" for hierarchy "display_unidades:display_seg_unidad"
+Info (12129): Elaborating entity "display_decenas" using architecture "A:arquitectura_decenas" for hierarchy "display_decenas:display_seg_decena"
+Info (12129): Elaborating entity "divisor_de_frecuencia" using architecture "A:arquitectura_divisor_de_frecuencia" for hierarchy "divisor_de_frecuencia:divf_servo"
+Info (12129): Elaborating entity "rom" using architecture "A:arquitectura_rom" for hierarchy "rom:Memoria_ROM"
+Warning (10492): VHDL Process Statement warning at rom.vhd(37): signal "hh" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rom.vhd(37): signal "mm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rom.vhd(37): signal "ss" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rom.vhd(39): signal "hh" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rom.vhd(39): signal "mm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rom.vhd(39): signal "ss" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12129): Elaborating entity "movimiento" using architecture "A:arquitectura_movimiento" for hierarchy "movimiento:Mov_servo"
+Warning (10492): VHDL Process Statement warning at movimiento.vhd(24): signal "valor_de_salida" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12129): Elaborating entity "senial" using architecture "A:arquitectura_senial" for hierarchy "senial:Senial_servo"
+Info (12129): Elaborating entity "senial_sensor" using architecture "A:arquitectura_senial_sensor" for hierarchy "senial_sensor:Senial_sensor"
+Info (12129): Elaborating entity "trigger" using architecture "A:arquitectura_trigger" for hierarchy "trigger:Trigger_sensor"
+Warning (10492): VHDL Process Statement warning at trigger.vhd(15): signal "echo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at trigger.vhd(13): inferring latch(es) for signal or variable "salida", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "salida" at trigger.vhd(13)
+Info (12129): Elaborating entity "divisor_de_frecuencia" using architecture "A:arquitectura_divisor_de_frecuencia" for hierarchy "divisor_de_frecuencia:divf_sensor"
+Info (12129): Elaborating entity "contador" using architecture "A:arquitectura_contador" for hierarchy "contador:Contador_sensor"
+Warning (10492): VHDL Process Statement warning at contador.vhd(16): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at contador.vhd(18): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12129): Elaborating entity "tipo_de_salida" using architecture "A:arquitectura_tipo_de_salida" for hierarchy "tipo_de_salida:salida_servomotor_10"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "display6[1]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "dsw[1]"
+Info (21057): Implemented 538 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 44 output pins
+    Info (21061): Implemented 488 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Sun May 15 19:10:29 2022
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:42
+
+

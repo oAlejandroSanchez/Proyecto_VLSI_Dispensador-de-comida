@@ -1,0 +1,18 @@
+--Proyecto 4
+--Dispensador de alimentos
+
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity Proyecto4 is port(
+	clk: in std_logic;
+	control: in std_logic_vector(4 downto 0);
+	salida: out std_logic);
+end entity;
+
+architecture arquitecturaProyecto4 of Proyecto4 is
+begin
+
+end architecture;
