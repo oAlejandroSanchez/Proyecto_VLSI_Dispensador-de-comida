@@ -1,2 +1,2 @@
-# Proyecto4_VLSI_Ayuda_Y4smin
+# Proyecto VLSI
 Este proyecto es un dispensador de alimentos para mascotas.
